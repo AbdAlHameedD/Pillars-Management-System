@@ -1,0 +1,16 @@
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Infra.deps.json
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Infra.runtimeconfig.json
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Infra.runtimeconfig.dev.json
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Infra.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Infra.pdb
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Core.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\bin\Debug\netcoreapp3.1\Pillars.Sys.Core.pdb
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.csproj.AssemblyReference.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.AssemblyInfoInputs.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.AssemblyInfo.cs
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.csproj.CoreCompileInputs.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.csproj.CopyComplete
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.pdb
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Infra\obj\Debug\netcoreapp3.1\Pillars.Sys.Infra.genruntimeconfig.cache

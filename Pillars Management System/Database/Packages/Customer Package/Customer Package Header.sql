@@ -1,29 +1,29 @@
 -- Start Code
 
-CREATE OR REPLACE PACKAGE CustomerPackage AS
+CREATE OR REPLACE PACKAGE PillarsCustomerPackage AS
 
     PROCEDURE GetCustomers;
     
     PROCEDURE AddCustomer(
-        mail IN customer.email%type,
-        fname IN customer.full_name%type,
-        sex IN customer.gender%type DEFAULT NULL,
-        birthOfDate IN customer.bod%type
+        mail IN Pillars_Customer.email%type,
+        fname IN Pillars_Customer.full_name%type,
+        sex IN Pillars_Customer.gender%type DEFAULT NULL,
+        birthOfDate IN Pillars_Customer.bod%type
     );
     
-    PROCEDURE DeleteCustomer(customer_id IN customer.id%type);
+    PROCEDURE DeleteCustomer(customer_id IN Pillars_Customer.id%type);
     
     PROCEDURE UpdateCustomer(
-        customer_id IN customer.id%type,
-        mail IN customer.email%type,
-        fname IN customer.full_name%type,
-        sex IN customer.gender%type,
-        birthOfDate IN customer.bod%type,
-        createDate IN customer.creation_date%type);
+        customer_id IN Pillars_Customer.id%type,
+        mail IN Pillars_Customer.email%type,
+        fname IN Pillars_Customer.full_name%type,
+        sex IN Pillars_Customer.gender%type,
+        birthOfDate IN Pillars_Customer.bod%type,
+        createDate IN Pillars_Customer.creation_date%type);
         
     PROCEDURE GetPhoneNumbersForCustomer(
-        cus_id IN customer.id%type);
+        cus_id IN Pillars_Customer.id%type);
 
-END CustomerPackage;
+END PillarsCustomerPackage;
 
 -- End Code

@@ -1,22 +1,22 @@
 -- Start Code
 
-CREATE OR REPLACE PACKAGE BODY AccountPackage AS
+CREATE OR REPLACE PACKAGE BODY PillarsAccountPackage AS
 
-    PROCEDURE getAccountByEmailOrUsernameAndPassword(
+    PROCEDURE GetAccountByEmailOrUsernameAndPassword(
         emailOrUsername IN VARCHAR,
-        passw IN Account.password%type) AS
+        passw IN Pillars_Account.password%type) AS
         
         ref_cursor SYS_REFCURSOR;
         BEGIN
             OPEN ref_cursor FOR
             SELECT *
-            FROM Account
+            FROM Pillars_Account
             WHERE ((emailOrUsername = username
             OR emailOrUsername = email) AND (passw = password));
             
             DBMS_SQL.RETURN_RESULT(ref_cursor);
-        END getAccountByEmailOrUsernameAndPassword;
+        END GetAccountByEmailOrUsernameAndPassword;
 
-END AccountPackage;
+END PillarsAccountPackage;
 
 -- End Code

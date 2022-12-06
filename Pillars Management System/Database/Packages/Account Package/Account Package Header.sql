@@ -1,11 +1,11 @@
 -- Start Code
 
-CREATE OR REPLACE PACKAGE AccountPackage AS
+CREATE OR REPLACE PACKAGE PillarsAccountPackage AS
 
-    PROCEDURE getAccountByEmailOrUsernameAndPassword(
+    PROCEDURE GetAccountByEmailOrUsernameAndPassword(
         emailOrUsername IN VARCHAR,
-        passw IN Account.password%type);
+        passw IN Pillars_Account.password%type);
 
-END AccountPackage;
+END PillarsAccountPackage;
 
 -- End Code

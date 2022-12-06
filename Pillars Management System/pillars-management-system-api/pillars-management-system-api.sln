@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pillars.Sys.API", "pillars-management-system-api\Pillars.Sys.API.csproj", "{FD75999C-AC68-47CC-8E1B-8F5584CA3ADB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD} = {5EAC128F-C940-4E83-88E9-61EB975E0BAD}
+		{3C263CBB-9521-4126-9862-08FC2E70508D} = {3C263CBB-9521-4126-9862-08FC2E70508D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pillars.Sys.Infra", "Pillars.Sys.Infra\Pillars.Sys.Infra.csproj", "{3C263CBB-9521-4126-9862-08FC2E70508D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD} = {5EAC128F-C940-4E83-88E9-61EB975E0BAD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pillars.Sys.Core", "Pillars.Sys.Core\Pillars.Sys.Core.csproj", "{5EAC128F-C940-4E83-88E9-61EB975E0BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD75999C-AC68-47CC-8E1B-8F5584CA3ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD75999C-AC68-47CC-8E1B-8F5584CA3ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD75999C-AC68-47CC-8E1B-8F5584CA3ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD75999C-AC68-47CC-8E1B-8F5584CA3ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C263CBB-9521-4126-9862-08FC2E70508D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C263CBB-9521-4126-9862-08FC2E70508D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C263CBB-9521-4126-9862-08FC2E70508D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C263CBB-9521-4126-9862-08FC2E70508D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAC128F-C940-4E83-88E9-61EB975E0BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07AA71C8-C658-4857-A1B7-5CEF8A92F6C4}
+	EndGlobalSection
+EndGlobal

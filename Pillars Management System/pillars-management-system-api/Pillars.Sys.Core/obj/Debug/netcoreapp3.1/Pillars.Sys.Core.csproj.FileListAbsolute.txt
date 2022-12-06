@@ -1,0 +1,10 @@
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\bin\Debug\netcoreapp3.1\Pillars.Sys.Core.deps.json
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\bin\Debug\netcoreapp3.1\Pillars.Sys.Core.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\bin\Debug\netcoreapp3.1\Pillars.Sys.Core.pdb
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.csproj.AssemblyReference.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.AssemblyInfoInputs.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.AssemblyInfo.cs
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.csproj.CoreCompileInputs.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\Pillars.Sys.Core\obj\Debug\netcoreapp3.1\Pillars.Sys.Core.pdb
