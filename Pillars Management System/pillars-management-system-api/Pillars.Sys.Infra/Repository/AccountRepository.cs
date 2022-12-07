@@ -33,7 +33,9 @@ namespace Pillars.Sys.Infra.Repository
                 direction: ParameterDirection.Input);
 
             return dbContext.Connection.Query<Account>(
-                "AccountPackage.GetAccountByEmailOrUsernameAndPassword", parameters).FirstOrDefault();
+                "PillarsAccountPackage.GetAccountByEmailOrUsernameAndPassword",
+                parameters,
+                commandType: CommandType.StoredProcedure).FirstOrDefault();
         }
     }
 }

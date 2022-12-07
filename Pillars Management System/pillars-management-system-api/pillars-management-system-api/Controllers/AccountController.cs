@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pillars.Sys.Core.Data;
 using Pillars.Sys.Core.ServiceInterface;
+using System.Collections.Generic;
 
 namespace pillars_management_system_api.Controllers
 {
@@ -15,7 +16,7 @@ namespace pillars_management_system_api.Controllers
             accountService = _accountService;
         }
 
-        [HttpPost]
+        [HttpPut]
         public Account GetAccountByEmailOrUsernameAndPassword(Account account)
         {
             return accountService.GetAccountByEmailOrUsernameAndPassword(account);

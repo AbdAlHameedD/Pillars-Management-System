@@ -19,7 +19,7 @@ namespace Pillars.Sys.Infra
             _Configuration = configuration;
         }
 
-        public DbConnection Connection
+        public new DbConnection Connection
         {
             get
             {

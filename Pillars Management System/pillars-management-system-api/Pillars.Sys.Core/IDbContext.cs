@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Pillars.Sys.Core
 {
-    public class IDbContext
+    public interface IDbContext
     {
         public DbConnection Connection { get; }
     }

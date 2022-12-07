@@ -91,3 +91,9 @@ C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management Sys
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\obj\Debug\netcoreapp3.1\Pillars.Sys.API.dll
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\obj\Debug\netcoreapp3.1\Pillars.Sys.API.pdb
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\obj\Debug\netcoreapp3.1\Pillars.Sys.API.genruntimeconfig.cache
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

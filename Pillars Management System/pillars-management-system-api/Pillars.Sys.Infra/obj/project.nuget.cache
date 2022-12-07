@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8hBvXVI2cPQCh2O17dYVkJWiO4EQCPg0H7mseJfNW7EHJdXgMw2BpEjRlZAiWYi6BoO1XyO+infiLtClor8X7Q==",
+  "dgSpecHash": "4NoY/9D/rvB3XNzcwOXq/JxxcTY8100qmvqkbrUS6MszRqe/8Q1zMWBQudkdiNhUqR6MspSbrWrHc3mWGbtB9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\dabda\\OneDrive\\Desktop\\Pillars-Management-System\\Pillars Management System\\pillars-management-system-api\\Pillars.Sys.Infra\\Pillars.Sys.Infra.csproj",
   "expectedPackageFiles": [
@@ -39,10 +39,15 @@
     "C:\\Users\\dabda\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.4\\oracle.manageddataaccess.core.3.21.4.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.diagnostics.performancecounter\\5.0.1\\system.diagnostics.performancecounter.5.0.1.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\system.directoryservices\\5.0.0\\system.directoryservices.5.0.0.nupkg.sha512",
