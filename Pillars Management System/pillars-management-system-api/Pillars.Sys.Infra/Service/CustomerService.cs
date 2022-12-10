@@ -1,4 +1,5 @@
 ﻿using Pillars.Sys.Core.Data;
+using Pillars.Sys.Core.DataTransferObject;
 using Pillars.Sys.Core.RepositoryInterface;
 using Pillars.Sys.Core.ServiceInterface;
 using System;
@@ -39,6 +40,22 @@ namespace Pillars.Sys.Infra.Service
         public List<PhoneNumber> GetPhoneNumbersForCustomer(int cus_id)
         {
             return customerRepository.GetPhoneNumbersForCustomer(cus_id);
+        }
+
+        public List<CustomerAndPhoneNumbers> GetCustomersAndPhoneNumbers()
+        {
+            List<CustomerAndPhoneNumbers> customersAndPhoneNumbers = new List<CustomerAndPhoneNumbers>();
+            List<Customer> customers = this.GetCustomers();
+            
+            foreach (Customer customer in customers)
+            {
+                CustomerAndPhoneNumbers customerAndPhoneNumbers = new CustomerAndPhoneNumbers();
+                customerAndPhoneNumbers.Customer = customer;
+                customerAndPhoneNumbers.PhoneNumbers = this.GetPhoneNumbersForCustomer(customer.Id);
+                customersAndPhoneNumbers.Add(customerAndPhoneNumbers);
+            }
+
+            return customersAndPhoneNumbers;
         }
     }
 }

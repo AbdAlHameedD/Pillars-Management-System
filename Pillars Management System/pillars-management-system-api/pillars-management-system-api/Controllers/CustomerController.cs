@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pillars.Sys.Core.Data;
+using Pillars.Sys.Core.DataTransferObject;
 using Pillars.Sys.Core.ServiceInterface;
 using System.Collections.Generic;
 
@@ -47,6 +48,13 @@ namespace pillars_management_system_api.Controllers
         public List<PhoneNumber> GetPhoneNumbersForCustomer(int customerId)
         {
             return customerService.GetPhoneNumbersForCustomer(customerId);
+        }
+
+        [HttpGet]
+        [Route("GetCustomersAndPhoneNumbers")]
+        public List<CustomerAndPhoneNumbers> GetCustomersAndPhoneNumbers()
+        {
+            return customerService.GetCustomersAndPhoneNumbers();
         }
     }
 }

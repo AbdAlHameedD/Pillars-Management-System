@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
   selector: 'app-authentication',
@@ -20,7 +21,18 @@ export class AuthenticationComponent implements OnInit {
     ]),
   });
 
-  constructor() {}
+  constructor(private authenticationService: AuthenticationService) {}
 
   ngOnInit(): void {}
+
+  public login() {
+    if (this.loginFormGroup.valid) {
+      let username: string =
+        this.loginFormGroup.controls['usernameFormControl'].value;
+      let password: string =
+        this.loginFormGroup.controls['passwordFormControl'].value;
+
+      this.authenticationService.login(username, password);
+    }
+  }
 }

@@ -1,0 +1,46 @@
+button.add-new-customer-btn {
+  font-family: "Josefin Sans";
+  font-size: 1.222vw;
+}
+
+div.header-attr {
+  font-weight: bold;
+  font-size: 1.1667vw;
+  font-family: monospace;
+  overflow: hidden !important;
+}
+
+div.attr {
+  border-left: 1px solid #4343437d;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+div.table {
+  background-color: #fff;
+  border: 1px solid black;
+  max-height: 605px;
+}
+
+div.bottom-gray-border {
+  border-bottom: 1px solid #4343437d;
+}
+
+div.detail-attr {
+  color: #7c7c7c;
+}
+
+div.detail-attr-value,
+div.detail-attr {
+  font-size: 15px;
+}
+
+.rotate-180deg {
+  transform: rotate(180deg);
+}
+
+.transtion-0-3 {
+  transition: 0.3s;
+}

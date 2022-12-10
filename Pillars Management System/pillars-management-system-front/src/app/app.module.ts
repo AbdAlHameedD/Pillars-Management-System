@@ -7,15 +7,26 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderLogoComponent } from './header-logo/header-logo.component';
+import { FirstAndLastName } from './pipe/firstAndLastName';
 
 @NgModule({
-  declarations: [AppComponent, AuthenticationComponent],
+  declarations: [
+    AppComponent,
+    AuthenticationComponent,
+    DashboardComponent,
+    HeaderLogoComponent,
+    FirstAndLastName,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

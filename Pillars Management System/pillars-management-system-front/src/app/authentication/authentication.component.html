@@ -24,11 +24,11 @@
                             <input type="text" matInput formControlName="usernameFormControl">
 
                             <mat-error *ngIf="loginFormGroup.controls['usernameFormControl'].hasError('required')">
-                                <strong>Username is required</strong>
+                                Username is required
                             </mat-error>
 
                             <mat-error *ngIf="loginFormGroup.controls['usernameFormControl'].hasError('minlength')">
-                                <strong>Username minimum length is 8</strong>
+                                Username minimum length is 8
                             </mat-error>
                         </mat-form-field>
 
@@ -39,20 +39,26 @@
                             <input type="password" matInput formControlName="passwordFormControl">
 
                             <mat-error *ngIf="loginFormGroup.controls['passwordFormControl'].hasError('required')">
-                                <strong>Password is required</strong>
+                                Password is required
                             </mat-error>
 
                             <mat-error *ngIf="loginFormGroup.controls['passwordFormControl'].hasError('maxlength')">
-                                <strong>Password maximum length is 20</strong>
+                                Password maximum length is 20
                             </mat-error>
 
                             <mat-error *ngIf="loginFormGroup.controls['passwordFormControl'].hasError('minlength')">
-                                <strong>Password minimum length is 10</strong>
+                                Password minimum length is 10
                             </mat-error>
                         </mat-form-field>
 
+                        <!-- Login invalid message -->
+                        <div class="d-flex d-none justify-content-center" id="loginStatusMessage">
+
+                        </div>
+
                         <!-- Sign In Button -->
-                        <button type="submit" class="d-block m-auto mt-4 px-5 py-2 btn btn-primary sign-in-btn">Sign
+                        <button type="submit" class="d-block m-auto mt-4 px-5 py-2 btn btn-primary sign-in-btn"
+                            (click)="login()">Sign
                             In</button>
                     </form>
                 </div>

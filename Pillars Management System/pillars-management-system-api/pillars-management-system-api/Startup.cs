@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Oracle.ManagedDataAccess.Client;
 using Pillars.Sys.Core;
 using Pillars.Sys.Core.RepositoryInterface;
@@ -16,6 +18,7 @@ using Pillars.Sys.Infra.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace pillars_management_system_api
@@ -54,6 +57,24 @@ namespace pillars_management_system_api
             
             services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddScoped<IPhoneNumberService, PhoneNumberService>();
+
+            // Configure JWT Authentication
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("CtHTJ5ZKVOLvRIq44PMccGJtMVybYyeSFGLtiHTp"))
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +90,8 @@ namespace pillars_management_system_api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("PillarsManagementSystem");
 
             app.UseEndpoints(endpoints =>
             {

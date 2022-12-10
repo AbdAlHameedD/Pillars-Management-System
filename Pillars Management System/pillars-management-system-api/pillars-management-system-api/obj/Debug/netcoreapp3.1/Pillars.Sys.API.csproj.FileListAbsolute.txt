@@ -97,3 +97,4 @@ C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management Sys
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dabda\OneDrive\Desktop\Pillars-Management-System\Pillars Management System\pillars-management-system-api\pillars-management-system-api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

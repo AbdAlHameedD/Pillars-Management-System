@@ -26,9 +26,9 @@ namespace Pillars.Sys.Infra.Repository
 
         public List<Customer> GetCustomers()
         {
-            return this.FetchCustomersFromDataBase();
+            return this.FetchCustomersFromDatabase();
         }
-        private List<Customer> FetchCustomersFromDataBase()
+        private List<Customer> FetchCustomersFromDatabase()
         {
             List<Customer> customers = new List<Customer>();
 

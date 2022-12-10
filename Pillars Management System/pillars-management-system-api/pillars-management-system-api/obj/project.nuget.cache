@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A5l0PmmXMdj76YG1Ea6zFnowrtCdyw97MPq9pq4H3KJKIobbUFYgiO9oMRGSKmk4B4iLUGhCJswf71HbirfFmg==",
+  "dgSpecHash": "8LcNeN55YH7i6rZGjCFGWfonvEncN3dh+I9UVfqIOLzO+sxboPXH2jNEMvqCUIvjk5Gzq1Ejh40XzdTQY4v4SQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dabda\\OneDrive\\Desktop\\Pillars-Management-System\\Pillars Management System\\pillars-management-system-api\\pillars-management-system-api\\Pillars.Sys.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dabda\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\dabda\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.0.0\\microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\dabda\\.nuget\\packages\\microsoft.data.sqlclient\\3.0.0\\microsoft.data.sqlclient.3.0.0.nupkg.sha512",
