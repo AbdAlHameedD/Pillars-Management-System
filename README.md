@@ -8,7 +8,7 @@ Admin Account for Testing:
   password: dalgamouni
   
  Note That:
-  Testing has been done up to 80%
-  Plliars Management System Executed in 7 Days
+  Testing has been done up to 80%.
+  Plliars Management System Executed in 7 Days.
   
 12 / 13 / 22 1:20 AM
