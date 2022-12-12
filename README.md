@@ -7,4 +7,8 @@ Admin Account for Testing:
   email: dabdalhammed6@gmail.com
   password: dalgamouni
   
-  12 / 13 / 22 1:20 AM
+ Note That:
+  Testing has been done up to 80%
+  Plliars Management System Executed in 7 Days
+  
+12 / 13 / 22 1:20 AM
