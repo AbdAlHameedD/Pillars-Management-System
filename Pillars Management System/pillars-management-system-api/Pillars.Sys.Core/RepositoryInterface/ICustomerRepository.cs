@@ -12,5 +12,6 @@ namespace Pillars.Sys.Core.RepositoryInterface
         bool DeleteCustomer(int customerId);
         bool UpdateCustomer(Customer customer);
         List<PhoneNumber> GetPhoneNumbersForCustomer(int cus_id);
+        Customer GetEmail(string email);
     }
 }

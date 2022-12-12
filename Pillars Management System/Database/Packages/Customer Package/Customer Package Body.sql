@@ -16,11 +16,12 @@ CREATE OR REPLACE PACKAGE BODY PillarsCustomerPackage AS
         mail IN pillars_customer.email%type,
         fname IN pillars_customer.full_name%type,
         sex IN pillars_customer.gender%type DEFAULT NULL,
-        birthOfDate IN pillars_customer.bod%type) AS
+        birthOfDate IN pillars_customer.bod%type,
+        createDate IN Pillars_Customer.creation_Date%type) AS
         
     BEGIN
-        INSERT INTO pillars_customer(email, full_name, gender, bod)
-        VALUES(mail, fname, sex, birthOfDate);
+        INSERT INTO pillars_customer(email, full_name, gender, bod, creation_Date)
+        VALUES(mail, fname, sex, birthOfDate, createDate);
         
         COMMIT;
     END AddCustomer;
@@ -65,6 +66,17 @@ CREATE OR REPLACE PACKAGE BODY PillarsCustomerPackage AS
         
         DBMS_SQL.RETURN_RESULT(ref_cursor);
     END GetPhoneNumbersForCustomer;
+    
+    PROCEDURE GetEmail(mail IN Pillars_Customer.email%type) AS
+    ref_cursor SYS_REFCURSOR;
+    BEGIN
+        OPEN ref_cursor FOR
+        SELECT email
+        FROM Pillars_Customer
+        WHERE email = mail;
+        
+        DBMS_SQL.RETURN_RESULT(ref_cursor);
+    END GetEmail;
 
 END PillarsCustomerPackage;
 

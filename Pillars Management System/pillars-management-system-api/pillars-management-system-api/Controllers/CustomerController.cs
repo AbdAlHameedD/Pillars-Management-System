@@ -56,5 +56,12 @@ namespace pillars_management_system_api.Controllers
         {
             return customerService.GetCustomersAndPhoneNumbers();
         }
+
+        [HttpPut]
+        [Route("GetEmail")]
+        public Customer GetEmail(Customer customer)
+        {
+            return customerService.GetEmail(customer.Email);
+        }
     }
 }

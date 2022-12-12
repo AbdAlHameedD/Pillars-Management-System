@@ -1,6 +1,16 @@
+import { DeleteTelephoneComponent } from './delete-telephone/delete-telephone.component';
+import { UpdateTelephoneDialogComponent } from './update-telephone-dialog/update-telephone-dialog.component';
+import { UpdateCustomerDialogComponent } from './update-customer-dialog/update-customer-dialog.component';
+import { ToastrService } from 'ngx-toastr';
+import { CreateCustomerDialogComponent } from './create-customer-dialog/create-customer-dialog.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CustomerAndPhoneNumbers } from './../data/customerAndPhoneNumbers';
 import { CustomerService } from './../service/customer.service';
 import { Component } from '@angular/core';
+import { DeleteCustomerDialogComponent } from './delete-customer-dialog/delete-customer-dialog.component';
+import { Customer } from '../data/customer';
+import { AddTelephoneDialogComponent } from './add-telephone-dialog/add-telephone-dialog.component';
+import { PhoneNumber } from '../data/phoneNumber';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +19,12 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   private rowExpandedStatus: Map<number, boolean> = new Map<number, boolean>();
-  public customersAndPhoneNumbers: CustomerAndPhoneNumbers[] = [];
 
-  constructor(private customerService: CustomerService) {}
+  constructor(
+    public customerService: CustomerService,
+    private dialog: MatDialog,
+    private toastr: ToastrService
+  ) {}
 
   async ngOnInit() {
     this.getCustomersAndPhoneNumbers();
@@ -58,8 +71,6 @@ export class DashboardComponent {
     document.getElementById(
       `expand-btn-${rowNumber}-container`
     )!.style.transform = `rotate(${rotateDegree}deg)`;
-
-    console.log(rowNumber);
   }
 
   private removeBottomGrayBorder(rowNumber: number): void {
@@ -97,7 +108,15 @@ export class DashboardComponent {
   private getCustomersAndPhoneNumbers(): void {
     this.customerService.getCustomersAndPhoneNumbers().subscribe(
       (result: any) => {
-        this.customersAndPhoneNumbers = result;
+        let temp: CustomerAndPhoneNumbers[] = result;
+
+        for (let customerAndPhoneNumbers of temp) {
+          this.customerService.customersAndPhoneNumbers.set(
+            customerAndPhoneNumbers.customer.id!,
+            customerAndPhoneNumbers
+          );
+        }
+
         this.fillRowExpandedStatus();
       },
       (error) => {
@@ -107,8 +126,50 @@ export class DashboardComponent {
   }
 
   private fillRowExpandedStatus(): void {
-    this.customersAndPhoneNumbers.forEach((customerAndPhoneNumbers) => {
-      this.rowExpandedStatus.set(customerAndPhoneNumbers.customer.id!, false);
+    this.customerService.customersAndPhoneNumbers.forEach(
+      (customerAndPhoneNumbers) => {
+        this.rowExpandedStatus.set(customerAndPhoneNumbers.customer.id!, false);
+      }
+    );
+  }
+
+  public openCreateNewCustomerDialog(): void {
+    this.dialog.open(CreateCustomerDialogComponent);
+  }
+
+  public openDeleteCustomerDialog(customer: Customer): void {
+    this.dialog
+      .open(DeleteCustomerDialogComponent, {
+        data: { customer: customer },
+      })
+      .afterClosed()
+      .subscribe((result) => {
+        if (result === 'yes')
+          this.toastr.success('Customer Deleted Successfully');
+      });
+  }
+
+  public openUpdateCustomerDialog(customer: Customer): void {
+    this.dialog.open(UpdateCustomerDialogComponent, {
+      data: { customer: customer },
+    });
+  }
+
+  public openAddTelephoneDialog(customerId: number): void {
+    this.dialog.open(AddTelephoneDialogComponent, {
+      data: { customerId: customerId },
+    });
+  }
+
+  public openUpdateTelephoneDialog(phoneNumber: PhoneNumber): void {
+    this.dialog.open(UpdateTelephoneDialogComponent, {
+      data: { phoneNumber: phoneNumber },
+    });
+  }
+
+  public openDeleteTelephoneDialog(phoneNumber: PhoneNumber): void {
+    this.dialog.open(DeleteTelephoneComponent, {
+      data: { phoneNumber: phoneNumber },
     });
   }
 }

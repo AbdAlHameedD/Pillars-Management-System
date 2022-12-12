@@ -1,0 +1,66 @@
+<!-- Create Course Dialog -->
+<mat-dialog-content class="col-12 m-0 mat-typography" style="width: 600px;">
+
+    <div class="row justify-content-center mt-3 mb-3 color-black fw-bold font-size-22">
+        Add New Customer
+    </div>
+
+    <form class="example-form" [formGroup]="addNewCustomerFormGroup">
+
+        <!-- Full Name -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Full Name: </mat-label>
+            <input matInput formControlName="fullNameFormControl" placeholder="Ex: Ahmad Omar Nael Omari" />
+        </mat-form-field>
+        <mat-error *ngIf="addNewCustomerFormGroup.controls['fullNameFormControl'].hasError('required')">
+            Full name is required
+        </mat-error>
+        <mat-error *ngIf="addNewCustomerFormGroup.controls['fullNameFormControl'].hasError('maxlength')">
+            Maximum length is 60 character
+        </mat-error>
+
+        <!-- Email -->
+        <mat-form-field class="example-full-width mt-3">
+            <mat-label>Email: </mat-label>
+            <input matInput formControlName="emailFormControl" placeholder="Ex: example@example.example" />
+        </mat-form-field>
+        <mat-error *ngIf="addNewCustomerFormGroup.controls['emailFormControl'].hasError('required')">
+            Email is required
+        </mat-error>
+        <mat-error *ngIf="addNewCustomerFormGroup.controls['emailFormControl'].hasError('maxlength')">
+            Maximum length is 320 character
+        </mat-error>
+
+        <!-- Gender -->
+        <mat-form-field appearance="fill" class="example-full-width mt-3">
+            <mat-label>Gender: </mat-label>
+            <mat-select formControlName="genderFormControl" value="male">
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-error *ngIf="addNewCustomerFormGroup.controls['genderFormControl'].hasError('required')">
+            Gender is required
+        </mat-error>
+
+        <!-- Birth Date -->
+        <mat-form-field appearance="fill" class="example-full-width mt-3">
+            <mat-label>Birth Date:</mat-label>
+            <input matInput formControlName="birthDateFormControl" [matDatepicker]="picker" required>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="row justify-content-around">
+            <button mat-dialog-close type="submit" class="btn btn-success py-2 px-5 col-5"
+                (click)="addNewCustomer()">Add</button>
+            <button mat-dialog-close class="btn btn-danger py-2 px-5 col-5" (click)="closeDialog()">Cancel</button>
+        </div>
+
+    </form>
+
+
+</mat-dialog-content>
+
+
+<!-- /End Create Exam Dialog -->

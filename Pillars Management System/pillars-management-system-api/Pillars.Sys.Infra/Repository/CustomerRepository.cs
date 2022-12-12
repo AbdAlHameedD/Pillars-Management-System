@@ -71,6 +71,7 @@ namespace Pillars.Sys.Infra.Repository
                 oracleCommand.Parameters.Add("fname", customer.Full_Name);
                 oracleCommand.Parameters.Add("sex", customer.Gender);
                 oracleCommand.Parameters.Add("birthOfDate", customer.Bod);
+                oracleCommand.Parameters.Add("createDate", customer.Creation_Date);
                 oracleConnection.Open();
                 oracleCommand.ExecuteNonQuery();
                 oracleConnection.Close();
@@ -117,6 +118,25 @@ namespace Pillars.Sys.Infra.Repository
         public List<PhoneNumber> GetPhoneNumbersForCustomer(int cus_id)
         {
             return FetchPhoneNumbersForCustomer(cus_id);
+        }
+        public Customer GetEmail(string email)
+        {
+            string packageAndProcedureName = "PillarsCustomerPackage.GetEmail";
+            using (OracleConnection oracleConnection = new OracleConnection(GetConnectionStrings()))
+            {
+                OracleCommand oracleCommand = new OracleCommand(packageAndProcedureName, oracleConnection);
+                oracleCommand.CommandType = CommandType.StoredProcedure;
+                oracleCommand.Parameters.Add("mail", email);
+
+                oracleConnection.Open();
+                using (OracleDataReader oracleDataReader = oracleCommand.ExecuteReader())
+                {
+                    Customer customer = new Customer();
+                    if (oracleDataReader.Read()) customer.Email = oracleDataReader.GetString(0);
+                    else customer.Email = null;
+                    return customer;
+                }
+            }
         }
         private List<PhoneNumber> FetchPhoneNumbersForCustomer(int cus_id)
         {

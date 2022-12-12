@@ -57,5 +57,10 @@ namespace Pillars.Sys.Infra.Service
 
             return customersAndPhoneNumbers;
         }
+
+        public Customer GetEmail(string email)
+        {
+            return this.customerRepository.GetEmail(email);
+        }
     }
 }

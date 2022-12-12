@@ -1,0 +1,42 @@
+<mat-dialog-content class="col-12 m-0 mat-typography" style="width: 500px;">
+
+    <div class="row justify-content-center mt-3 mb-3 color-black fw-bold font-size-22">
+        Add New Telephone
+    </div>
+
+    <form class="example-form" [formGroup]="addNewTelephoneFormGroup">
+
+        <!-- Telephone -->
+        <mat-form-field class="example-full-width">
+            <mat-label>Telephone</mat-label>
+            <span class="ms-2 mt-3" matPrefix>+962 &nbsp;</span>
+            <input matInput formControlName="telephoneFormControl" placeholder="775158103">
+        </mat-form-field>
+
+        <mat-error *ngIf="addNewTelephoneFormGroup.controls['telephoneFormControl'].hasError('required')">
+            Telephone is required
+        </mat-error>
+        <mat-error *ngIf="addNewTelephoneFormGroup.controls['telephoneFormControl'].hasError('maxlength')">
+            Telephone length should be 9 character
+        </mat-error>
+        <mat-error *ngIf="addNewTelephoneFormGroup.controls['telephoneFormControl'].hasError('minlength')">
+            Telephone length should be 9 character
+        </mat-error>
+
+        <div class="row justify-content-around my-4">
+            <div class="col-2"></div>
+            <div class="col-4">
+                <button class="btn btn-danger py-2 px-4" mat-button mat-dialog-close="no">Cancel</button>
+            </div>
+
+            <div class="col-4">
+                <button class="btn btn-primary py-2 px-4" mat-button="yes" cdkFocusInitial
+                    (click)="addNewTelephone()">Add</button>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+    </form>
+
+
+</mat-dialog-content>

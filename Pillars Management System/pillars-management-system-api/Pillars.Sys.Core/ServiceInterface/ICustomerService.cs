@@ -14,5 +14,6 @@ namespace Pillars.Sys.Core.ServiceInterface
         bool UpdateCustomer(Customer customer);
         List<PhoneNumber> GetPhoneNumbersForCustomer(int cus_id);
         List<CustomerAndPhoneNumbers> GetCustomersAndPhoneNumbers();
+        Customer GetEmail(string email);
     }
 }

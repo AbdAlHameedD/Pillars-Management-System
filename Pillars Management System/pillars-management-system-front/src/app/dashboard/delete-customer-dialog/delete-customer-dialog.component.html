@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Delete Customer</h1>
+<div class="py-3 px-5" mat-dialog-content>
+    Would you like to delete <strong>{{data.customer.full_Name}}</strong>?
+</div>
+<div mat-dialog-actions>
+    <button class="btn btn-secondary py-2 px-3" mat-button mat-dialog-close="no">No</button>
+    <button class="btn btn-primary py-2 px-3" mat-button mat-dialog-close="yes" cdkFocusInitial
+        (click)="deleteCustomer()">Yes</button>
+</div>

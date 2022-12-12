@@ -2,7 +2,8 @@
     <app-header-logo></app-header-logo>
 
     <!-- Add New Customer Button -->
-    <button class="btn btn-primary add-new-customer-btn mt-5 ms-5 px-4 py-3" type="button">
+    <button class="btn btn-primary add-new-customer-btn mt-5 ms-5 px-4 py-3" type="button"
+        (click)="openCreateNewCustomerDialog()">
         <i class="bi bi-plus-square"></i>
         Add New Customer
     </button>
@@ -43,35 +44,35 @@
 
         </div>
 
-        <ng-container *ngFor="let customerAndPhoneNumbers of customersAndPhoneNumbers">
+        <ng-container *ngFor="let customerAndPhoneNumbers of customerService.customersAndPhoneNumbers | keyvalue">
             <!-- Row -->
-            <div class="d-flex w-100 bottom-gray-border" id="customer-row-{{customerAndPhoneNumbers.customer.id!}}">
+            <div class="d-flex w-100 bottom-gray-border" id="customer-row-{{customerAndPhoneNumbers.key}}">
                 <div class=" w-100 m-0">
                     <div class="row w-100 h-100 m-0 p-0">
 
                         <!-- Number Of Customer -->
                         <div class="attr overflow-auto col-1 text-center px-0 py-2">
                             <div class="d-flex align-items-center h-100 justify-content-center">{{
-                                customerAndPhoneNumbers.customer.id! }}</div>
+                                customerAndPhoneNumbers.key }}</div>
                         </div>
 
                         <!-- Name Attribute -->
                         <div class="attr overflow-auto col-3 text-center px-0 py-2">
                             <div class="d-flex align-items-center h-100 justify-content-center">{{
-                                customerAndPhoneNumbers.customer.full_Name! | firstAndLastName }}</div>
+                                customerAndPhoneNumbers.value.customer.full_Name! | firstAndLastName }}</div>
                         </div>
 
                         <!-- Email Address Attribute -->
                         <div class="attr overflow-auto col-4 text-center px-0 py-2">
                             <div class="d-flex align-items-center h-100 justify-content-center">{{
-                                customerAndPhoneNumbers.customer.email }}
+                                customerAndPhoneNumbers.value.customer.email }}
                             </div>
                         </div>
 
                         <!-- Creation Date Attribute -->
                         <div class="attr overflow-auto col-2 text-center px-0 py-2">
                             <div class="d-flex align-items-center h-100 justify-content-center">{{
-                                customerAndPhoneNumbers.customer.creation_Date | date: 'mediumDate' }}</div>
+                                customerAndPhoneNumbers.value.customer.creation_Date | date: 'mediumDate' }}</div>
                         </div>
 
                         <!-- Functions Attribute -->
@@ -80,18 +81,20 @@
                             <div class="row col-12 justify-content-around m-0">
                                 <div class="col-1"></div>
                                 <div class="col-3">
-                                    <i class="bi bi-pencil-fill"
+                                    <i class="bi bi-pencil-fill" mat-raised-button
+                                        (click)="openUpdateCustomerDialog(customerAndPhoneNumbers.value.customer)"
                                         style="color: #0B5ED7; font-size: 20px; cursor: pointer;"></i>
                                 </div>
                                 <div class="col-3">
-                                    <i class="bi bi-trash-fill"
+                                    <i class="bi bi-trash-fill" mat-raised-button
+                                        (click)="openDeleteCustomerDialog(customerAndPhoneNumbers.value.customer)"
                                         style="color: #DB0000; font-size: 20px; cursor: pointer;"></i>
                                 </div>
 
                                 <div class="col-3 transtion-0-3"
-                                    id="expand-btn-{{customerAndPhoneNumbers.customer.id!}}-container">
+                                    id="expand-btn-{{customerAndPhoneNumbers.value.customer.id!}}-container">
                                     <i class="bi bi-caret-down-fill" style="font-size: 20px; cursor: pointer;"
-                                        (click)="handleCustomerExpand(customerAndPhoneNumbers.customer.id!)"></i>
+                                        (click)="handleCustomerExpand(customerAndPhoneNumbers.key)"></i>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
@@ -103,8 +106,8 @@
 
             <!-- Expand Row -->
             <div class="d-flex w-100" style="height: 0px; overflow: hidden;"
-                id="expand-container-{{customerAndPhoneNumbers.customer.id!}}">
-                <div class="position-relative" id="expand-information-{{customerAndPhoneNumbers.customer.id!}}"
+                id="expand-container-{{customerAndPhoneNumbers.key}}">
+                <div class="position-relative" id="expand-information-{{customerAndPhoneNumbers.key}}"
                     style="width: 100%; height: 100%; transition: 0.3s; top: -200px;">
 
                     <!-- Expand Row Container-->
@@ -132,7 +135,7 @@
                                                     <!-- Full Name Value -->
                                                     <div class="col-8">
                                                         <div class="detail-attr-value">{{
-                                                            customerAndPhoneNumbers.customer.full_Name! |
+                                                            customerAndPhoneNumbers.value.customer.full_Name! |
                                                             titlecase }}
                                                         </div>
                                                     </div>
@@ -150,7 +153,7 @@
                                                     <!-- Email Value -->
                                                     <div class="col-8">
                                                         <div class="detail-attr-value">{{
-                                                            customerAndPhoneNumbers.customer.email }}</div>
+                                                            customerAndPhoneNumbers.value.customer.email }}</div>
                                                     </div>
 
                                                 </div>
@@ -166,7 +169,8 @@
                                                     <!-- Gender Value -->
                                                     <div class="col-8">
                                                         <div class="detail-attr-value">{{
-                                                            customerAndPhoneNumbers.customer.gender | titlecase }}</div>
+                                                            customerAndPhoneNumbers.value.customer.gender | titlecase }}
+                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -182,7 +186,8 @@
                                                     <!-- Birth Date Value -->
                                                     <div class="col-8">
                                                         <div class="detail-attr-value">{{
-                                                            customerAndPhoneNumbers.customer.bod | date:'mediumDate'}}
+                                                            customerAndPhoneNumbers.value.customer.bod |
+                                                            date:'mediumDate'}}
                                                         </div>
                                                     </div>
 
@@ -199,7 +204,7 @@
                                                     <!-- Creation Date Value -->
                                                     <div class="col-8">
                                                         <div class="detail-attr-value">{{
-                                                            customerAndPhoneNumbers.customer.creation_Date | date:
+                                                            customerAndPhoneNumbers.value.customer.creation_Date | date:
                                                             'medium' }}
                                                         </div>
                                                     </div>
@@ -207,19 +212,21 @@
                                                 </div>
 
                                                 <!-- Functions -->
-                                                <div class="row justify-content-center my-4">
+                                                <div class="row justify-content-center my-5">
                                                     <div class="col-4 d-flex justify-content-around">
 
-                                                        <i class="bi bi-pencil-fill"
+                                                        <i class="bi bi-pencil-fill" mat-raised-button
+                                                            (click)="openUpdateCustomerDialog(customerAndPhoneNumbers.value.customer)"
                                                             style="color: #0B5ED7; font-size: 20px; cursor: pointer;"></i>
 
-                                                        <i class="bi bi-trash-fill"
+                                                        <i class="bi bi-trash-fill" mat-raised-button
+                                                            (click)="openDeleteCustomerDialog(customerAndPhoneNumbers.value.customer)"
                                                             style="color: #DB0000; font-size: 20px; cursor: pointer;"></i>
 
 
                                                         <i class="bi bi-caret-down-fill rotate-180deg"
                                                             style="font-size: 20px; cursor: pointer;"
-                                                            (click)="handleCustomerExpand(customerAndPhoneNumbers.customer.id!)"></i>
+                                                            (click)="handleCustomerExpand(customerAndPhoneNumbers.key)"></i>
 
                                                     </div>
                                                 </div>
@@ -240,7 +247,7 @@
                                                     <div class="col-12">
 
                                                         <ng-container
-                                                            *ngFor="let phoneNumber of customerAndPhoneNumbers.phoneNumbers">
+                                                            *ngFor="let phoneNumber of customerAndPhoneNumbers.value.phoneNumbers">
                                                             <!-- Phone Number -->
                                                             <div class="row py-2" id="phone-id-{{phoneNumber.id}}"
                                                                 style="border-bottom: 1px solid black;">
@@ -254,12 +261,14 @@
                                                                         <div
                                                                             class="col-3 d-flex justify-content-center">
                                                                             <i class="bi bi-pencil-fill"
+                                                                                (click)="openUpdateTelephoneDialog(phoneNumber)"
                                                                                 style="color: #0B5ED7; font-size: 20px; cursor: pointer;"></i>
                                                                         </div>
 
                                                                         <div
                                                                             class="col-3 d-flex justify-content-center">
                                                                             <i class="bi bi-trash-fill"
+                                                                                (click)="openDeleteTelephoneDialog(phoneNumber)"
                                                                                 style="color: #DB0000; font-size: 20px; cursor: pointer;"></i>
                                                                         </div>
                                                                         <div class="col-3"></div>
@@ -271,7 +280,12 @@
                                                         </ng-container>
                                                     </div>
 
+                                                </div>
 
+                                                <div class="col-12 my-3">
+                                                    <button class="btn btn-success px-3 py-2 d-block m-auto"
+                                                        (click)="openAddTelephoneDialog(customerAndPhoneNumbers.key)">Add
+                                                        Telephone</button>
                                                 </div>
                                             </div>
                                         </div>
